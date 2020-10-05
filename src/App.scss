@@ -1,0 +1,199 @@
+@import "./module.variables.scss";
+@import './pages';
+@import './components';
+@import './modules/styles';
+@import "./modules.custom.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html,
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    color: $white;
+    width: 100%;
+    height: 100%;
+    background: $offDark;
+}
+
+#__next {
+    width: 100%;
+    height: 100%;
+}
+
+// ============================ Input style ================================
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    background-color: transparent;
+    -webkit-text-fill-color: $grey;
+    box-shadow: unset !important;
+    transition: background-color 5000s ease-in-out 0s;
+    font-size: 1em;
+}
+// ============================ End Input style ============================
+
+// ============================ Link style ================================
+a {
+    color: $info;
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+// ============================ End Link style ============================
+
+// ============================ Element style ================================
+img {
+    max-width: 100%;
+}
+// ============================ End Element style ============================
+
+// ============================ Layout style ================================
+.textRight {
+    text-align: right !important;
+}
+
+.textLeft {
+    text-align: left !important;
+}
+
+.textBold {
+    font-weight: 600;
+    color: $dark;
+}
+
+@for $i from 50 to 200 {
+    .w#{$i} {
+        width: $i + unquote("px");
+    }
+}
+
+@for $i from 0 to 100 {
+    .mb#{$i} {
+        margin-bottom: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .mt#{$i} {
+        margin-top: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .mr#{$i} {
+        margin-right: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .ml#{$i} {
+        margin-left: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .pdb#{$i} {
+        padding-bottom: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .pdt#{$i} {
+        padding-top: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .pdr#{$i} {
+        padding-right: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .pdl#{$i} {
+        padding-left: $i + unquote("px") !important;
+    }
+}
+
+@for $i from 0 to 100 {
+    .pd#{$i} {
+        padding: $i + unquote("px") !important;
+    }
+}
+
+.wfull {
+    width: 100%;
+}
+
+.sticky {
+    position: sticky;
+
+    &.top30 {
+        top: 30px;
+    }
+}
+// ============================ End Layout style ============================
+
+// ============================ Scrollbar style ================================
+* {
+    /* width */
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $offDark;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $dark;
+        border-radius: 5px;
+
+        &:hover {
+            background: $primary;
+        }
+    }
+}
+// ============================ End Scrollbar style ============================
+
+// ============================ Typograrphy style ================================
+.textDanger {
+    color: $danger !important;
+}
+
+.textSuccess {
+    color: $success !important;
+}
+
+.textWarning {
+    color: $warning !important;
+}
+
+.textInfo {
+    color: $info !important;
+}
+
+.textPrimary {
+    color: $primary !important;
+}
+// ============================ End Typograrphy style ============================
+
+.boxBg {
+    background: $boxBg;
+}

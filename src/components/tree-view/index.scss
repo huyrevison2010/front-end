@@ -1,0 +1,45 @@
+@import "../../module.variables.scss";
+
+.TreeView {
+    background: $boxBg;
+    border-radius: $borderRadius;
+    margin-bottom: 150px;
+
+    .node {
+        cursor: pointer;
+    }
+
+    .node circle {
+        fill: #202325;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+
+    .node text {
+        font: 10px sans-serif;
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+        transition: all 0s;
+    }
+
+    #tab-affiliate-tabpane-tree-view #tree-view {
+        border-top: none !important;
+        margin-top: -10px;
+    }
+
+    #tree-view {
+        border: 2px solid rgba(0, 107, 66, 0.3) !important;
+    }
+
+    #tree-view > svg:first-child {
+        display: block;
+    }
+
+    #tree-view > svg {
+        display: none;
+    }
+}

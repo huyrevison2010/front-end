@@ -1,0 +1,28 @@
+steps:
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: 'bash'
+    args: [ '-c', 'gcloud secrets versions access latest --secret=dockerhub-vonicvn > decrypted-data.txt' ]
+
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: 'bash'
+    args: ["-c", "docker login --username=vonicvn --password-stdin < decrypted-data.txt"]
+
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "vonicvn/idadefi-client:$REVISION_ID", "."]
+
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["tag","vonicvn/idadefi-client:$REVISION_ID","vonicvn/idadefi-client:latest"]
+
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "vonicvn/idadefi-client:$REVISION_ID"]
+
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "vonicvn/idadefi-client:latest"]
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "compute","ssh","jason@production","--zone=asia-east2-c",
+        "--command=docker pull vonicvn/idadefi-client:$REVISION_ID && docker service update --image vonicvn/idadefi-client:$REVISION_ID idadefi_idadefi-client"
+      ]
+    

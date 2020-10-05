@@ -1,0 +1,40 @@
+@import "../../../module.variables";
+
+.InputWraper {
+    > .wraper {
+        > .input {
+            .InputNumberCoin {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: $inputHeight;
+                padding: 7px 0;
+
+                .coinIcon {
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 10px;
+                    object-fit: contain;
+                }
+
+                input {
+                    border: 0;
+                    width: 100%;
+                    flex: 1;
+                    font-size: 1em;
+                    color: $white;
+                    padding: 0 10px;
+                    background: none;
+                }
+
+                .symbol {
+                    padding: 0 7px;
+                    border-left: 1px solid rgba($color: $grey, $alpha: 0.5);
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

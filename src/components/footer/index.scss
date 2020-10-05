@@ -1,0 +1,136 @@
+@import "../../module.variables.scss";
+
+.Desktop {
+  .Footer {
+    margin: 0 15px;
+    .section {
+      min-height: 290px;
+    }
+  }
+}
+
+// ============================ Copy right =================================
+.copyRightWraper {
+  height: 40px;
+  background: $dark;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+  .txtCopyRight {
+    font-size: 12px;
+  }
+}
+
+.Footer {
+  justify-content: center;
+
+  .section {
+    background: $boxBg;
+    margin-top: 15px;
+    padding-top: 1px;
+    border-radius: 5px;
+    padding: 20px;
+
+    .title {
+      font-size: 20px;
+      color: $white;
+    }
+  }
+
+  .left {
+    .contentWraper {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 60px;
+
+      .item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .number {
+          font-size: 100px;
+          font-weight: 300;
+        }
+        .title {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  .middle {
+    .contentWraper {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+
+      img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .level {
+        width: 25%;
+        cursor: pointer;
+
+        .txtPercent {
+          text-align: center;
+          margin-top: 5px;
+          color: $primary;
+        }
+      }
+
+      .content {
+        width: 60%;
+      }
+    }
+  }
+
+  .right {
+    .contentWraper {
+      display: flex;
+    }
+
+    .socialItem {
+      display: flex;
+      margin-top: 20px;
+
+      .socialIcon {
+        svg {
+          width: 45px;
+          margin-right: 15px;
+        }
+      }
+      
+      .square {
+        width: 45px;
+        height: 45px;
+        background: $white;
+        margin-right: 15px;
+      }
+
+      .link {
+        color: $primary;
+      }
+
+      .name {
+        font-size: 12px;
+      }
+    }
+
+    .ml {
+      margin-left: 100px;
+    }
+  }
+
+  .display-block {
+    display: block;
+  }
+
+  .display-none {
+    display: none;
+  }
+}

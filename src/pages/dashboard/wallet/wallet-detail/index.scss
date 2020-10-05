@@ -1,0 +1,51 @@
+@import "../../../../module.variables.scss";
+
+.WalletDetail {
+  padding: 60px 15px 0;
+
+  .btnWithDraw {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .transactionWraper {
+    margin-top: 32px;
+
+    .titleWraper {
+      svg {
+        width: 21px;
+
+        * {
+          fill: $primary;
+        }
+      }
+
+      p {
+        color: $primary;
+        margin-left: 8px;
+        font-size: 1.5em;
+      }
+
+      display: flex;
+    }
+
+    .btnWraper {
+      margin: 20px 0;
+
+      .button {
+        height: 32px;
+        color: $white;
+        font-size: 15px;
+        padding: 0 25px;
+        margin-right: 15px;
+      }
+    }
+
+    .transactions {
+      background: $dark;
+      padding-bottom: 10px;
+      border-radius: $borderRadius;
+    }
+  }
+}

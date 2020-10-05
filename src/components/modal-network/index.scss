@@ -1,0 +1,70 @@
+@import "../../module.variables.scss";
+
+.ModalNetwork {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: auto;
+    background: rgba($color: #000000, $alpha: 0.8);
+    z-index: 800;
+
+    .wraper {
+        width: calc(100vw - 60px);
+        max-width: 100%;
+        border-radius: $borderRadius;
+        background: $dark;
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba($color: $grey, $alpha: 0.1);
+
+            .title {
+                color: $white;
+                padding: 15px;
+                font-size: 1.2em;
+                font-weight: 500;
+            }
+
+            .btnClose {
+                padding: 15px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.6;
+
+                svg {
+                    height: 15px;
+
+                    * {
+                        fill: $white;
+                    }
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.Mobile {
+    .ModalTree {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .wraper {
+            width: calc(100vw - 30px) !important;
+        }
+    }
+}

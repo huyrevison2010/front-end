@@ -1,0 +1,55 @@
+@import "../../../../../module.variables.scss";
+
+.WalletCard {
+    display: flex;
+    justify-content: space-between;
+    background: $boxBg;
+    border-radius: 15px;
+    padding: 25px 15px;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 15px;
+            }
+
+            img {
+                width: 35px;
+                height: 35px;
+                margin-right: 15px;
+            }
+        }
+
+        .info {
+            .value {
+                font-size: 22px;
+                text-align-last: right;
+            }
+        }
+    }
+
+    .cta {
+        margin-left: 20px;
+
+        .Button {
+            height: 30px;
+        }
+
+        &.hide {
+            .Button {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../module.variables.scss';
+
+.MobileNavigatorMenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $dark;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top-right-radius: 15px;
+
+    a {
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $white;
+        text-decoration: none !important;
+        padding: 0 25px;
+        max-width: 100%;
+
+        span {
+            text-align: center;
+            font-size: 0.8em;
+            text-decoration: none !important;
+        }
+
+        svg {
+            height: 18px;
+            margin-bottom: 3px;
+
+            * {
+                fill: $white;
+            }
+        }
+
+        &.active {
+            color: $primary;
+            cursor: default;
+
+            svg * {
+                fill: $primary;
+            }
+
+            &:hover {
+                color: $primary;
+
+                svg * {
+                    fill: $primary;
+                }
+            }
+        }
+
+        &:hover {
+            color: $white;
+
+            svg * {
+                fill: $white;
+            }
+        }
+    }
+}

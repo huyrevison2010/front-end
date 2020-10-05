@@ -1,0 +1,37 @@
+@import "../../../module.variables.scss";
+
+.SelectLanguage {
+    display: flex;
+}
+
+.SetttingPage {
+    .settingItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        background: $dark;
+        border-radius: $borderRadius;
+        color: $white;
+        text-decoration: none;
+        font-weight: 500;
+        margin-bottom: 15px;
+        min-height: 77px;
+
+        .btnNav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                height: 15px;
+                transform-origin: center;
+                transform: rotate(180deg);
+
+                * {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}

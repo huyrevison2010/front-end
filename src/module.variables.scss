@@ -1,0 +1,137 @@
+// ============================ Required Core style ================================
+$primary: #00d0cf;
+$success: #6db722;
+$info: #6a76fc;
+$warning: #fcd40c;
+$danger: #ff6647;
+
+$white: #fff;
+$light: #f7f9fc;
+$dark: #1b1638;
+$offDark: #2e2951;
+$grey: #bdbdbd;
+$orange: #f4aa06;
+
+// Layout
+$borderRadius: 5px;
+$borderColor: rgba(#8f9bb3, 0.3);
+$boxShadow: 0px 2px 3px
+	rgba(
+		$color: #000000,
+		$alpha: 0.2,
+	);
+
+$inputHeight: 38px;
+$buttonHeight: 45px;
+
+$zIndexListSuggests: 102;
+$zIndexTableLoadingData: 103;
+$zIndexTableFilter: 104;
+
+// Mixin Styles
+@mixin borderBox {
+	border: 1px solid $grey;
+}
+
+@mixin btnStyle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+	font-weight: 400;
+	outline: none;
+	height: $buttonHeight;
+	padding: 0 15px;
+	border-radius: $borderRadius;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+
+	> svg {
+		height: 16px;
+		margin-right: 10px;
+	}
+
+	&:disabled {
+		background: rgba($color: $grey, $alpha: 1);
+		opacity: 0.2;
+		cursor: not-allowed;
+		color: $white;
+		border-color: $grey;
+
+		&:hover {
+			background: rgba($color: $grey, $alpha: 1);
+			opacity: 0.2;
+			color: $white;
+			border-color: $grey;
+			box-shadow: none;
+		}
+	}
+}
+
+@mixin btnDarkColor($color) {
+	@include btnStyle;
+
+	background: $color;
+	border: 1px solid $color;
+	color: $white;
+	transition: 0.25s ease;
+
+	> svg * {
+		fill: $white;
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 15px $color;
+	}
+}
+
+@mixin btnOutlineColor($color) {
+	@include btnStyle;
+
+	background: none;
+	border: 1px solid $color;
+	color: $color;
+	transition: 0.25s ease;
+	opacity: 1;
+
+	> svg * {
+		fill: $color;
+	}
+
+	&:hover {
+		opacity: 1;
+		background: $color;
+		color: $white;
+		box-shadow: none;
+
+		svg * {
+			fill: $white;
+		}
+	}
+
+	&.loading {
+		border-color: rgba($color: $color, $alpha: 0);
+		cursor: not-allowed;
+
+		.iconLoading {
+			svg circle {
+				stroke: $color;
+			}
+		}
+
+		&:hover {
+			background: transparent !important;
+		}
+	}
+}
+// ============================ End Required Core style ============================
+
+// ============================ Project variable style ================================
+$boxBgColor: rgba(
+	$color: #000000,
+	$alpha: 0.2,
+);
+// ============================ End Project variable style ============================
+
+$boxBg: rgba($dark, 0.7);

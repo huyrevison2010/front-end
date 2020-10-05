@@ -1,0 +1,163 @@
+.App {
+    .InputWraper {
+        > .label {
+            color: $white;
+        }
+
+        > .description {
+            color: $grey;
+        }
+
+        > .wraper {
+            > .input {
+                input {
+                    color: $white;
+                    background: transparent;
+                }
+            }
+        }
+
+        &.disabled {
+            > .wraper {
+                .input {
+                    border-color: transparent !important;
+                    background: $offDark;
+
+                    input {
+                        color: $white;
+                    }
+
+                    &:after {
+                        cursor: default;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba($color: #000000, $alpha: 0.1);
+                        border-radius: $borderRadius;
+                    }
+                }
+            }
+        }
+    }
+
+    // ============================ Table style ================================
+    .Table {
+        min-height: 150px;
+
+        table {
+            thead {
+                tr {
+                    border-bottom: 1px solid $offDark;
+                }
+            }
+
+            tbody {
+                background: transparent;
+                box-shadow: none;
+                border-radius: 0;
+                border-bottom: 1px solid $offDark;
+            }
+
+            td {
+                color: $white;
+            }
+        }
+
+        .Message {
+            background: transparent !important;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        .fetching {
+            background: transparent !important;
+            border-radius: 0;
+
+            svg.spinner {
+                circle {
+                    stroke: $white;
+                }
+            }
+        }
+
+        &.hidePaging {
+            .TablePagination {
+                display: none;
+            }
+
+            table {
+                tbody {
+                    tr:last-child {
+                        td {
+                            border-bottom: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ============================ End Table style ============================
+
+    // ============================ Alert style ================================
+    &.Mobile {
+        .Alert {
+            padding: 0;
+            max-width: 100%;
+            width: calc(100% - 30px);
+
+            .Alert__Item {
+                margin-top: 15px;
+
+                .icon {
+                    width: max-content;
+                    padding: 10px;
+
+                    svg {
+                        height: 25px;
+                    }
+                }
+
+                .content {
+                    padding: 10px 0;
+                    padding-right: 15px;
+
+                    .title {
+                        font-size: 1em;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                    }
+
+                    .message {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    // ============================ End Alert style ============================
+
+    // ============================ Button style ================================
+    .Button {
+        &.offDark-outline {
+            @include btnOutlineColor($offDark);
+        }
+
+        &.grey-outline {
+            @include btnOutlineColor($grey);
+        }
+    }
+    // ============================ End Button style ============================
+
+    // ============================ Message style ================================
+    .Mobile {
+        .Message {
+            .content {
+                word-break: break-word;
+            }
+        }
+    }
+    // ============================ End Message style ============================
+}

@@ -1,0 +1,156 @@
+@import "./components";
+@import "../../../module.variables.scss";
+
+.Desktop {
+  .DashboardGeneralPage {
+    .InvestFormWraper {
+      padding: 30px;
+
+      .investmentTitle {
+        text-align: center;
+        color: $success;
+        font-size: 3em;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+
+        svg {
+          height: 30px;
+          margin-right: 10px;
+
+          * {
+            fill: $success;
+          }
+        }
+      }
+
+      .invested {
+        text-align: center;
+        margin-bottom: 30px !important;
+      }
+    }
+
+    .WalletsWraper {
+      padding: 30px;
+
+      > .title {
+        text-align: center;
+        color: $white;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .NumberReportCard {
+      background: $boxBg;
+      margin-bottom: 25px;
+      border-radius: $borderRadius;
+      padding: 25px;
+      text-align: center;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        font-size: 1em;
+
+        svg {
+          height: 20px;
+          margin-right: 10px;
+
+          * {
+            fill: $white;
+          }
+        }
+      }
+
+      .value {
+        font-size: 2em;
+        color: $primary;
+      }
+
+      &.animate {
+        @keyframes animate {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.6;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .value {
+          animation: animate 0.5s infinite ease;
+        }
+      }
+    }
+  }
+}
+
+.Mobile {
+  .DashboardGeneralPage {
+    padding-bottom: 200px;
+
+    .btnInvest {
+      position: fixed;
+      bottom: 80px;
+      width: calc(100% - 30px);
+      left: 15px;
+    }
+
+    .NumberReportCard {
+      background: $boxBg;
+      margin-bottom: 15px;
+      border-radius: $borderRadius;
+      padding: 15px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 1em;
+
+        svg {
+          height: 18px;
+          margin-right: 10px;
+
+          * {
+            fill: $white;
+          }
+        }
+      }
+
+      .value {
+        font-size: 1.5em;
+        color: $primary;
+      }
+
+      &.animate {
+        @keyframes animate {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.6;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .value {
+          animation: animate 0.5s infinite ease;
+        }
+      }
+    }
+  }
+}

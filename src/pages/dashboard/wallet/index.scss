@@ -1,0 +1,12 @@
+@import "./components";
+@import "./wallet-detail";
+
+.Wallet {
+    padding: 0 15px;
+
+    .title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,106 @@
+@import "../../module.variables.scss";
+
+.Desktop {
+  .Header {
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .logo {
+          margin-right: 30px;
+
+          img {
+            height: 30px;
+          }
+        }
+
+        .addressBox {
+          border: 1px solid rgba($color: $borderColor, $alpha: 0.5);
+          padding: 0 15px;
+          cursor: pointer;
+
+          .label {
+            border-right: 1px solid rgba($color: $grey, $alpha: 0.5);
+            padding-right: 15px;
+            margin-right: 15px;
+            color: $white;
+          }
+
+          .line {
+            height: 30px;
+            padding: 0 15px;
+          }
+          img {
+            width: 15px;
+            margin-left: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.Mobile {
+  .Header {
+    border-bottom-left-radius: 15px;
+  }
+}
+
+.Header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $dark;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 15px;
+  z-index: 200;
+
+  .logo {
+    img {
+      height: 35px;
+      margin-left: 15px;
+    }
+  }
+
+  .addressBox {
+    margin-top: 5px;
+    display: flex;
+    max-width: 60%;
+    border-radius: $borderRadius;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+      height: 30px;
+      cursor: pointer;
+
+      * {
+        fill: $white;
+      }
+    }
+
+    .value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $white;
+      font-size: 14px;
+      padding-right: 15px;
+      white-space: nowrap;
+    }
+  }
+}
